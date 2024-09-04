@@ -34,4 +34,5 @@ if [ -f `which powerline-daemon` ]; then
   . /usr/share/powerline/bindings/bash/powerline.sh
 fi
 
+export HISTCONTROL=ignoredups
 export PATH=$PATH:/home/david/.spicetify

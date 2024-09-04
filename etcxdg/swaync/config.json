@@ -23,7 +23,7 @@
   "notification-visibility": {},
   "notification-window-width": 400,
   "positionX": "right",
-  "positionY": "top",
+  "positionY": "bottom",
   "script-fail-notify": true,
   "scripts": {},
   "timeout": 10,
@@ -80,8 +80,10 @@
     },
     "volume": {
       "label": "󰕾",
+        "expand-button-label": "",
+        "collapse-button-label": "",
         "show-per-app": true,
-        "show-per-app-icon": true,
+        "show-per-app-icon": false,
         "show-per-app-label":true
     }
 },

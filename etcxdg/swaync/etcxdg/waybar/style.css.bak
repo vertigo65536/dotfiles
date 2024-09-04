@@ -1,0 +1,106 @@
+* {
+  font-family: JetBrainsMono Nerd Font, feather;
+  font-weight: 900;
+  font-size: 14px;
+  color: #c0caf5;
+  margin: 0 3px 0 3px;
+}
+
+/* Set background color of main waybar window */
+window#waybar {
+  background: rgba(21, 22, 30, 0.5);
+}
+
+/* Set background color of tooltips */
+tooltip {
+  background: #1e1e2e;
+}
+
+/* Set workspace text color and padding */
+#workspaces button {
+  padding: 0 6px 0 0;
+}
+
+/* Sets active workspace to have a solid line on the bottom */
+#workspaces button.active {
+  border-bottom: 2px solid #7aa2f7;
+  border-radius: 0;
+  margin-bottom: 2px;
+  color: #434ff7;
+}
+
+/* More workspace stuff for highlighting on hover */
+#workspaces button.focused {
+  color: #a6adc8;
+}
+
+#workspaces button.urgent {
+  color: #f7768e;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  color: #cdd6f4;
+}
+
+/* Sets background, padding, margins, and borders for (all) modules */
+#custom-kernel,
+#workspaces,
+#clock,
+#window,
+#temperature,
+#cpu,
+#memory,
+#pulseaudio,
+#tray,
+#mpd,
+#network,
+#battery,
+#custom-gpu-usage {
+  background: rgba(21, 22, 30, 0.7);
+  padding: 0 10px;
+  margin: 3px 0;
+  border: 0;
+}
+
+#window.empty {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Set up rounding to make these modules look like separate pills */
+#mpd {
+  border-radius: 8px;
+  margin-left: 4px;
+}
+
+#workspaces,
+#tray {
+  border-radius: 8px;
+  margin-right: 4px;
+}
+
+#window {
+  border-radius: 8px;
+}
+window#waybar.empty #window {
+  background:none;
+}
+
+/* Rounding only on left of module */
+#pulseaudio {
+  border-radius: 8px 0 0 8px;
+}
+
+#custom-pacman {
+  margin: 0 8px 0 8px;
+}
+
+#custom-notification {
+  margin-right: 7px;
+}
+
+/* Rounding only on right of module(s) */
+#clock {
+  border-radius: 0 8px 8px 0;
+  margin-right: 4px;
+}

@@ -5,7 +5,7 @@
   transition: 100ms;
   box-shadow: unset;
   background-color: unset;
-  color: unset;
+  color: red;
 }
 
 .blank-window {
@@ -20,6 +20,7 @@
 .floating-notifications .notification-row .notification-background .notification,
 .floating-notifications.background .notification-background .notification .notification-content {
   margin-bottom: unset;
+  padding: 50px 10px 10px 10px;
 }
 
 .control-center .notification-row .notification-background .notification {
@@ -40,11 +41,11 @@
 
 .floating-notifications.background .notification-background .notification .notification-content,
 .control-center .notification-background .notification .notification-content {
-/*  border-top: 1px solid rgba(164, 162, 167, 0.15);
-  border-left: 1px solid rgba(164, 162, 167, 0.15);
-  border-right: 1px solid rgba(128, 127, 132, 0.15);
-  border-bottom: 1px solid rgba(128, 127, 132, 0.15);*/
-  background-color: #1D1D22;
+  border: 1px solid red;
+  /*border-left: 3px solid rgba(256, 0, 0, 0.8);
+  border-right: 3px solid rgba(256, 0, 0, 0.8);
+  border-bottom: 3px solid rgba(256, 0, 0, 0.8);*/
+  background: rgba(0,0,0,0.8);
   padding: 0.818rem;
   padding-right: unset;
   margin-right: unset;
@@ -69,7 +70,8 @@
 .control-center .notification-row .notification-background .notification.normal .notification-content .body,
 .floating-notifications.background .notification-background .notification.low .notification-content .body,
 .floating-notifications.background .notification-background .notification.normal .notification-content .body {
-  color: #92919a;
+  padding-left: 10px;
+  color: red;
 }
 
 .control-center .notification-row .notification-background .notification.critical .notification-content,
@@ -90,6 +92,8 @@
 
 .control-center .notification-row .notification-background .notification .notification-content .summary,
 .floating-notifications.background .notification-background .notification .notification-content .summary {
+  color: red;
+  padding-left: 10px;
   font-family: 'Gabarito', 'Lexend', sans-serif;
   font-size: 0.9909rem;
   font-weight: 500;
@@ -144,7 +148,7 @@
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.45);
   margin: 37px 7px 7px 7px;
   /*background-color: #14141B;*/
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.3);
   padding: 1.023rem;
 }
 
@@ -173,7 +177,20 @@
   background-color: #77767e;
 }
 
+.control-center-clear-all button {
+  border: 1px solid red;
+  background: black;
+} 
+
+.control-center-clear-all button:hover {
+  border: 1px solid red;
+}
+
 /* title widget */
+
+.text-button{
+  background: black;
+}
 
 .widget-title {
   padding: 0.341rem;
@@ -183,13 +200,13 @@
 .widget-title label {
   font-family: 'Gabarito', 'Lexend', sans-serif;
   font-size: 1.364rem;
-  color: #e4e1e6;
+  /*color: #e4e1e6;*/
   margin-left: 0.941rem;
 }
 
 .widget-title button {
-  border: unset;
-  background-color: unset;
+  border: 2px solid black;
+  background-color: black;
   border-radius: 1.159rem;
   -gtk-outline-radius: 1.159rem;
   padding: 0.141rem 0.141rem;
@@ -199,12 +216,13 @@
 .widget-title button label {
   font-family: 'Gabarito', sans-serif;
   font-size: 1.0409rem;
-  color: #e4e1e6;
+  /*color: #e4e1e6;*/
   margin-right: 0.841rem;
 }
 
 .widget-title button:hover {
   background-color: black;
+  border: 2px solid red;
 }
 
 .widget-title button:active {
@@ -261,7 +279,7 @@
 .widget-buttons-grid>flowbox>flowboxchild>button:hover label{
   background-clip: content-box;
   background-image: unset;
-  margin: 2px;
+  border: 2px solid red;
   background-color: black;
 }
 
@@ -269,9 +287,7 @@
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:checked label {
-  border: 2px;
-  border-color: red;
-  color: red;
+  border: 2px solid red;
 }
 
 
@@ -282,6 +298,14 @@
   margin: 8px;
   -gtk-outline-radius: 1.159rem;
   -gtk-outline-radius: 1.159rem;
+}
+
+.widget-volume .text-button {
+  background: unset;
+}
+
+.widget-volume .text-button button:hover {
+  background: black;
 }
 
 .widget-volume trough {
@@ -324,3 +348,9 @@
 .widget-mpris-subtitle {
   font-size: 1.1rem;
 }
+
+.widget-mpris .image-button {
+  background: unset;
+}
+
+
