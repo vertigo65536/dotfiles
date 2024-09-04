@@ -1,6 +1,6 @@
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 USERCONFIG_DIR=${SCRIPT_DIR}/userconfig
-USERCONFIG_FILES=(~/.config/sway/ ~/.config/kanshi ~/.config/rofi ~/.config/waybar)
+USERCONFIG_FILES=(~/.config/sway ~/.config/kanshi ~/.config/rofi ~/.config/waybar)
 XDG_DIR=${SCRIPT_DIR}/etcxdg
 XDG_FILES=(/etc/xdg/swaync /etc/xdg/waybar)
 USER_DIR=${SCRIPT_DIR}/user
