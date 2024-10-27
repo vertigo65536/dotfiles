@@ -241,6 +241,7 @@ workspace $ws1 output $mon1 $mon1b
 workspace $ws2 output $mon2 $mon2b
 workspace $ws3 output $mon2 $mon2b
 workspace $ws4 output $mon1 $mon1b
+workspace $ws6 output $mon1 $mon1b
 workspace $ws8 output $mon2 $mon2b
 workspace $ws9 output $mon2 $mon2b
 workspace $ws10 output $mon2 $mon2b
@@ -329,7 +330,7 @@ exec --no-startup-id swaymsg 'workspace $ws2; exec /usr/bin/terminator -T launch
 #exec --no-startup-id swaymsg 'workspace $ws3; exec /usr/bin/terminator -e "cmus"'
 exec --no-startup-id swaymsg 'workspace $ws3; exec spotify-launcher
 exec --no-startup-id swaymsg 'workspace $ws4; exec "mullvad-exclude steam"'
-exec --no-startup-id swaymsg 'workspace $ws6; exec 'proton-mail'
+exec --no-startup-id swaymsg 'workspace $ws6; exec "proton-mail"'
 exec --no-startup-id swaymsg 'exec nextcloud --background'
 #exec --no-startup-id swaymsg 'workspace $ws8; exec /usr/bin/caprine'
 exec --no-startup-id swaymsg 'workspace $ws8; exec "chromium --app=http://messenger.com/ --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=wayland"'

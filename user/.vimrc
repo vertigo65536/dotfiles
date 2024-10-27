@@ -1,4 +1,10 @@
 set number
+set autoindent
+set expandtab
+set smartindent
+set tabstop=4
+set smarttab
+filetype plugin indent on
 syntax on
 xnoremap "+y y:call system("wl-copy", @")<cr>
 nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
