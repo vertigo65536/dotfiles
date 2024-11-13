@@ -206,16 +206,19 @@ set $ws20 "20"
 bindsym $mod+m output "eDP-1" toggle
 bindsym $mod+y output $mon1 toggle
 bindsym $mod+Shift+y output $mon2 toggle
-assign [class="^firefox*"] $ws1
+assign [app_id="firefox" title="^\[FirefoxWindow1\].*$"] $ws1
 assign [title="launchterm"] $ws2
 assign [title="Spotify Premium"] $ws3
 assign [class="Spotify"] $ws3
 assign [class="steam"] $ws4
 assign [class="Proton Mail"] $ws6
-assign [class="Caprine"] $ws8
+assign [class="messenger"] $ws8
+assign [class="whatsapp"] $ws8
+assign [app_id="firefox" title="^\[FirefoxWindow2\].*$"] $ws9
 assign [app_id="discord"] $ws10
 assign [class="discord"] $ws10
-assign [class="Chromium"] $ws8
+assign [class="messenger"] $ws8
+assign [class="whatsapp"] $ws8
 #assign [name="^cmus*"] $ws3
 
 for_window [app_id="discord"] opacity $opacity
@@ -235,7 +238,6 @@ for_window [class="steam_app*"] blur disable
 for_window [class="Waybar*"] blur disable
 for_window [class="steam_app*"] shadows disable
 for_window [class="steam_app*"] opacity 1
-
 
 workspace $ws1 output $mon1 $mon1b
 workspace $ws2 output $mon2 $mon2b
@@ -324,20 +326,27 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-exec --no-startup-id swaymsg 'workspace $ws1; exec MOZ_ENABLE_WAYLAND=1 /usr/bin/firefox'
+exec --no-startup-id swaymsg 'workspace $ws1; exec MOZ_ENABLE_WAYLAND=1 /usr/bin/firefox -P default-release-1'
 exec --no-startup-id swaymsg 'workspace $ws2; exec /usr/bin/terminator -T launchterm'
 exec --no-startup-id swaymsg 'workspace $ws2; exec /usr/bin/terminator -T launchterm'
 #exec --no-startup-id swaymsg 'workspace $ws3; exec /usr/bin/terminator -e "cmus"'
-exec --no-startup-id swaymsg 'workspace $ws3; exec spotify-launcher
+exec --no-startup-id swaymsg 'workspace $ws3; exec "spotify-launcher"'
 exec --no-startup-id swaymsg 'workspace $ws4; exec "mullvad-exclude steam"'
 exec --no-startup-id swaymsg 'workspace $ws6; exec "proton-mail"'
 exec --no-startup-id swaymsg 'exec nextcloud --background'
 #exec --no-startup-id swaymsg 'workspace $ws8; exec /usr/bin/caprine'
-exec --no-startup-id swaymsg 'workspace $ws8; exec "chromium --app=http://messenger.com/ --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=wayland"'
+exec --no-startup-id swaymsg 'workspace $ws8; layout tabbed' 
+exec --no-startup-id swaymsg 'workspace $ws8; exec "firefox -P Messenger -new-instance --name='messenger' -kiosk 'https://messenger.com/'"'
+exec --no-startup-id swaymsg 'workspace $ws8;  exec "firefox -P Whatsapp -new-instance --name='whatsapp' -kiosk 'https://web.whatsapp.com/'"'
 exec --no-startup-id swaymsg 'workspace $ws10; exec /home/david/.bin/Discord/Discord --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=wayland'
 
+exec swaymsg 'workspace $ws8; fullscreen disable; fullscreen disable; layout tabbed'
 exec --no-startup-id swaymsg 'workspace $ws2'
 exec --no-startup-id swaymsg 'workspace $ws1'
 default_border none
 
 exec --no-startup-id "swaybg --image ~/Pictures/wallpapers/other.jpg --mode fill"
+
+client.focused              #000000     #FF0000     #000000     #000000
+client.unfocused            #000000     #000000     #FF0000     #000000
+client.focused_inactive     #000000     #000000     #FF0000     #000000
