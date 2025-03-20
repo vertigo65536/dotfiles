@@ -19,9 +19,9 @@ set $mon1 "LG Electronics LG ULTRAGEAR 0x00017433"
 set $mon3 "eDP-1"
 set $opacity 0.8
 
-output $mon1 adaptive_sync on
+output * adaptive_sync on
 
-exec --no-startup-id "waybar"
+exec --no-startup-id "waybar -c /etc/xdg/waybar/config.sway"
 
 ##Asus Hotkeys
 bindsym XF86KbdBrightnessDown exec "asusctl --prev-kbd-bright"
@@ -61,7 +61,7 @@ blur enable
 corner_radius 10
 shadows enable
 shadow_blur_radius 99
-layer_effects "waybar" 'blur enable; blur_ignore_transparent enable;'
+#layer_effects "waybar" 'blur enable; blur_ignore_transparent enable;'
 layer_effects "rofi" blur enable
 layer_effects "swaync-control-center" 'blur enable; blur_ignore_transparent enable;'
 
@@ -338,7 +338,7 @@ exec --no-startup-id swaymsg 'exec nextcloud --background'
 exec --no-startup-id swaymsg 'workspace $ws8; layout tabbed' 
 exec --no-startup-id swaymsg 'workspace $ws8; exec "firefox -P Messenger -new-instance --name='messenger' -kiosk 'https://messenger.com/'"'
 exec --no-startup-id swaymsg 'workspace $ws8;  exec "firefox -P Whatsapp -new-instance --name='whatsapp' -kiosk 'https://web.whatsapp.com/'"'
-exec --no-startup-id swaymsg 'workspace $ws10; exec /home/david/.bin/Discord/Discord --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=wayland'
+exec --no-startup-id swaymsg 'workspace $ws10; exec "discord --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=wayland'
 
 exec swaymsg 'workspace $ws8; fullscreen disable; fullscreen disable; layout tabbed'
 exec --no-startup-id swaymsg 'workspace $ws2'

@@ -8,8 +8,8 @@
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/pacman", "hyprland/mode", "hyprland/scratchpad"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["custom/pacman", "sway/mode", "sway/scratchpad"],
+    "modules-center": ["sway/workspaces"],
     "modules-right": ["custom/notification", "pulseaudio", "temperature", "battery", "clock"],
     "exclusive": false,
 },
@@ -22,8 +22,8 @@
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/pacman", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["custom/pacman", "sway/mode", "sway/scratchpad", "custom/media"],
+    "modules-center": ["sway/workspaces"],
     "modules-right": ["tray", "custom/notification", "pulseaudio", "network", "cpu", "temperature", "battery", "clock", "custom/powermenu"],
     "exclusive": false
 }]

@@ -1,7 +1,12 @@
 profile "home" {
 	output eDP-1 disable
-	output "BNQ BenQ RL2755 S2F02722SL0" transform 270 position 0,0
-	output "LG Electronics LG ULTRAGEAR 0x00017433" position 1080,320
+	output "BNQ BenQ RL2755 S2F02722SL0" transform 270 position 0,0 mode 1920x1080
+	output "LG Electronics LG ULTRAGEAR 0x00017433" position 1080,320 mode 1920x1080@164.96Hz
+	exec /home/david/.config/kanshi/autodefault.sh
+}
+profile "console gaming" {
+	output eDP-1 disable
+	output "BNQ BenQ RL2755 S2F02722SL0" transform 270 position 0,0 mode 1920x1080
 	exec /home/david/.config/kanshi/autodefault.sh
 }
 profile "portable" {
